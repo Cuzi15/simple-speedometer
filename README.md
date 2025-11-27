@@ -1,7 +1,7 @@
 # simple-speedometer
 A minimal and lightweight speedometer script designed for FiveM servers.
 
-![Uploading image.png…]()
+![Image](https://github.com/user-attachments/assets/3afa4b0d-bceb-4829-a40f-c3b6f6c7a392)
 
 
 # Installation
