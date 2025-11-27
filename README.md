@@ -4,12 +4,8 @@ A minimal and lightweight speedometer script designed for FiveM servers.
 
 📥 Installation
 
-Download or clone the resource.
+Download the resource, then place the folder into your FiveM server’s resources directory.
 
-Place the folder into your FiveM server’s resources directory.
-
-Add the following line to your server.cfg:
-
-  ensure simple-speedometer
+Add the following line to your server.cfg:    ensure simple-speedometer
 
 Start or restart your server.
