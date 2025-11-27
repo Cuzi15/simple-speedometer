@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    background-color: transparent;
+  }
+}
+
+@keyframes gear {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;           /* Keep visible */
+    transform: scale(1);  /* Keep at normal size */
+  }
+}
+
+.container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  top: 85%;           /* Move to top */
+  left: 88%;          /* Move to left */
+  width: 130px;      /* Change width */
+  height: 50px;     /* Change height */
+  font-size: 45px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  color: #e0e1e2;
+  animation: show 500ms forwards;
+  padding: 20px;     /* Change padding */
+  border-radius: 6px;
+  background: #141414a0; /* Slightly more transparent */
+  border: 2px solid #0070b880; /* Optional: subtle border */
+  box-shadow: 0 0 16px 4px #00cfffcc, 0 0 32px 8px #00cfff99;
+}
+
+.speed {
+  transition: color 350ms ease;
+  position: absolute;
+  left: 25%;
+  top: -28%;                /* Moved down a little */
+  transform: translateX(-50%);
+  font-size: 36px;
+  font-weight: normal;
+  color: #00cfff;           /* Neon blue to match the shadow */
+}
+
+.measurementType {
+  font-size: 18px;
+  font-style: normal;   /* Changed from italic to normal */
+  color: #e0e1e2;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  margin-bottom: 0;
+}
+
+.hidden {
+  animation: hide 500ms forwards !important;
+}
+
+.speedPart {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative; /* Add this line */
+}
+
+.rpmPart {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 50%;                      /* Center horizontally */
+  transform: translateX(-50%);    /* Center horizontally */
+  bottom: 0;
+}
+
+.rpmBar {
+  width: 100%;
+  height: 10px;
+  background: #333;           /* Visible background for the bar */
+  border-radius: 5px;
+  border: 1px solid #222;     /* Optional: subtle border */
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.rpm {
+  height: 100%;
+  background: #00cfff; /* Neon blue to match the shadow */
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all 450ms ease;
+  /* width is set dynamically in JS */
+}
+
+.gear {
+  position: absolute;
+  right: 22px;
+  top: 10px;
+  font-size: 18px;
+  color: #00cfff;           /* Neon blue to match the shadow */
+  animation: gear 1.4s forwards;
+}
