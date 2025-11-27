@@ -2,7 +2,7 @@
 A minimal and lightweight speedometer script designed for FiveM servers.
 
 
-📥 Installation
+#📥 Installation
 
 Download the resource, then place the folder into your FiveM server’s resources directory.
 
